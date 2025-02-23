@@ -1,0 +1,46 @@
+print[[
+
+ ________ _______           ___  ___  ________  _________        ________  ________  ________  ___  _________   
+|\  _____\\  ___ \         |\  \|\  \|\   __  \|\___   ___\     |\   __  \|\   __  \|\   __  \|\  \|\___   ___\ 
+\ \  \__/\ \   __/|        \ \  \\\  \ \  \|\  \|___ \  \_|     \ \  \|\  \ \  \|\  \ \  \|\ /\ \  \|___ \  \_| 
+ \ \   __\\ \  \_|/__       \ \   __  \ \   __  \   \ \  \       \ \  \\\  \ \   _  _\ \   __  \ \  \   \ \  \  
+  \ \  \_| \ \  \_|\ \       \ \  \ \  \ \  \ \  \   \ \  \       \ \  \\\  \ \  \\  \\ \  \|\  \ \  \   \ \  \ 
+   \ \__\   \ \_______\       \ \__\ \__\ \__\ \__\   \ \__\       \ \_______\ \__\\ _\\ \_______\ \__\   \ \__\
+    \|__|    \|_______|        \|__|\|__|\|__|\|__|    \|__|        \|_______|\|__|\|__|\|_______|\|__|    \|__|
+                                                                                                                
+                                                                                                                
+                                                                                                                
+
+
+
+~~~~~~~~COMMANDS~~~~~~~~
+
+prefix is .
+.speed <number> - Increases/decreases the speed of the Orbit.
+.mode <number> - Changes the mode of the hat orbit.
+.offset <number> - depicts how close/how far the orbit is from the player/Humanoid.
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+]]
+
+local TextChatService = game:GetService("TextChatService")
+
+local function sendChatMessage(message)
+    if TextChatService then
+        local chatChannel = TextChatService.TextChannels.RBXGeneral
+        if chatChannel then
+            chatChannel:SendAsync(message)
+        else
+            warn("Default chat channel (RBXGeneral) not found!")
+        end
+    else
+        warn("TextChatService is not available!")
+    end
+end
+
+sendChatMessage("-gh 4504231783 4504231783 4504231783 4504231783  4504231783 4504231783 4504231783 4504231783 4504231783 4504231783 4504231783 4504231783 4504231783 4504231783 4504231783 4504231783 4504231783")
+wait(0.5)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/JaoExploiter/Hat-Orbit/refs/heads/main/HatOrbit.lua"))()
+wait(.25)
+sendChatMessage("-net")
+sendChatMessage("/console")
